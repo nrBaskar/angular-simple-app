@@ -84,7 +84,7 @@
 
       copy:
 
-        src: ./
+        source: ./
 
         dest: "{{ dest_path }}"
 
@@ -129,13 +129,9 @@
     # This tool is used to run the Node server in background
 
     # and keep tracking of the running process
-
     - name: Install PM2
-
       npm: name=pm2 global=yes state=present
-
     # is already running (avoids restarting the service on each playbook
-
     # execution)
 
     - name: Get Forever's list of running processes
