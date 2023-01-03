@@ -84,7 +84,7 @@
 
       copy:
 
-        source: ./
+        src: /home/ec2-user/
 
         dest: "{{ dest_path }}"
 
