@@ -37,14 +37,18 @@
       copy:
         src: ./
         dest: "{{dest_path}}"
-    - name: Install Nodejs & AngularJS
-      shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | bash -
+    # Install NodeJS library
+    # using multiple shell commands
+    - name: Install Nodejs & ExpressJS
+      shell: 'curl --silent --location https://rpm.nodesource.com/setup_16.x | bash -'
+    # If other package are required mention the package name in "name"
+    # eg: ngix, curl, wget, apache2, nodejs
     - name: Install reqired packages
-      command: sudo install nodejs
+      yum:
+        name: nodejs
+        state: present
     - name: Install reqired packages
       command: sudo npm install -g @angular/cli
-    - name: Install reqired packages
-      command: npm install -g gulp
     - name: Install reqired packages
       command: sudo npm install
       args:
