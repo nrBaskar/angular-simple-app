@@ -32,7 +32,7 @@
     - name: create directory
       file:
         state: directory
-        dest: "{{ dest_path }}"
+        dest: "{{dest_path}}"
     - name: Copy website to the host
       copy:
         src: ./
