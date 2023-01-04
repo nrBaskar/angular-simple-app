@@ -50,7 +50,7 @@
     #- name: Install reqired packages
      # command: sudo npm install -g @angular/cli
     - name: Install reqired packages
-        command: cd "{{ dest_path }}"
+      command: cd "{{ dest_path }}"
     - name: Install PM2
       npm: name=pm2 global=yes state=present
     - name: Get Forever's list of running processes
