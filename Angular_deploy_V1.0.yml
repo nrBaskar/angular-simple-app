@@ -37,8 +37,6 @@
       copy:
         src: ./
         dest: "{{dest_path}}"
-    - name: update system
-      command: sudo yum-get upgrade && sudo yum-get update -y
     - name: Install Nodejs & AngularJS
       shell: curl --silent --location https://rpm.nodesource.com/setup_16.x | bash -
     - name: Install reqired packages
